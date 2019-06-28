@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  rabbitmq:
+    addresses: 192.168.234.188
+    port: 5672
+    username: xuezn
+    password: 7356241
+    virtual-host: test
+    listener:
+      simple:
+        acknowledge-mode: manual
+    publisher-confirms: true
+    publisher-returns: true

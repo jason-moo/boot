@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-test
+      cluster-nodes: 192.168.233.188:9300
+      repositories:
+        enabled: true
+  datasource:
+    url:  jdbc:mysql://192.168.233.188:3306/test?characterEncoding=UTF-8
+    username: root
+    password: 123456
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+logging:
+  config: classpath:logback/logback.xml
